@@ -29,8 +29,10 @@ export default function Questionario() {
     termos: termos === "CONCORDO" ? 1 : 0,
     e_professor: e_professor === "SIM" ? 1 : 0,
     tem_vinculo_com_a_catolica: tem_vinculo_com_a_catolica === "SIM" ? 1 : 0,
-    ano,
-    media
+    ENEM: {
+      ano,
+      media
+    }
   };
 
   return (
