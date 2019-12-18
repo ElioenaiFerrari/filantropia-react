@@ -8,8 +8,8 @@ export default function Input(props) {
       <label htmlFor={props.owner}>
         {props.text}
         <input
+          type={props.type}
           placeholder="Digite aqui..."
-          type="text"
           id={props.owner}
           onChange={event => props.variable(event.target.value)}
         />

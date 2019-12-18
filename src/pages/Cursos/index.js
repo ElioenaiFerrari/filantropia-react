@@ -8,27 +8,29 @@ import AdvanceBtn from "../../components/AdvanceBtn";
 import { cursos } from "./cursos";
 
 export default function Cursos() {
-  const [primeiraOp, setPrimeiraOp] = useState("ADMINISTRAÇÃO");
-  const [segundaOp, setSegundaOp] = useState("ADMINISTRAÇÃO");
+  const [primeira_op, setPrimeiraOp] = useState("ADMINISTRAÇÃO");
+  const [segunda_op, setSegundaOp] = useState("ADMINISTRAÇÃO");
   // Salva os cursos no localStorage
   const [curso, setCursos] = useState({});
   useEffect(() => {
-    setCursos({ primeiraOp, segundaOp });
-  }, [primeiraOp, segundaOp]);
+    setCursos({ primeira_op, segunda_op });
+  }, [primeira_op, segunda_op]);
 
   return (
     <>
       <Title text="3 - Cursos" />
       <Container>
         <Select
+          width="150px"
           variable={setPrimeiraOp}
-          owner="primeiraOp"
+          owner="primeira_op"
           text="1° Opção"
           content={cursos}
         />
         <Select
+          width="150px"
           variable={setSegundaOp}
-          owner="segundaOp"
+          owner="segunda_op"
           text="2° Opção"
           content={cursos}
         />

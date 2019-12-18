@@ -4,7 +4,7 @@ import { Container } from "./styles";
 
 export default function Select(props) {
   return (
-    <Container>
+    <Container props={props}>
       <label htmlFor={props.owner}>{props.text}</label>
       <select
         id={props.owner}

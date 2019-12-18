@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
+  align-items: center;
   margin-bottom: 10px;
 
   label {
@@ -15,6 +17,7 @@ export const Container = styled.div`
     border: none;
     padding: 5px;
     border-radius: 5px;
+    width: ${props => props.props.width};
   }
 
   option {
