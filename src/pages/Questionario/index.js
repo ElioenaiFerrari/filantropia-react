@@ -24,14 +24,14 @@ export default function Questionario() {
   const [media, setMedia] = useState("");
   const [termos, setTermos] = useState("CONCORDO");
 
-  const grupo_familiar = {
+  const questionario = {
     onde_cursou,
     termos: termos === "CONCORDO" ? 1 : 0,
     e_professor: e_professor === "SIM" ? 1 : 0,
     tem_vinculo_com_a_catolica: tem_vinculo_com_a_catolica === "SIM" ? 1 : 0,
     ENEM: {
       ano,
-      media
+      media: Number(media)
     }
   };
 
@@ -53,9 +53,9 @@ export default function Questionario() {
 
       <AdvanceBtn
         text="GRUPO FAMILIAR"
-        route="questionario"
-        name="grupo_familiar"
-        variable={grupo_familiar}
+        route="grupo_familiar"
+        name="questionario"
+        variable={questionario}
       />
     </>
   );
