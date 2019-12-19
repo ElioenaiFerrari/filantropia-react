@@ -10,31 +10,33 @@ import QA from "./QA";
 import QB from "./QB";
 import QC from "./QC";
 import QD from "./QD";
+import Veiculos from "./Veiculos";
+import Familia from "./Familia";
 
 export default function GrupoFamiliar() {
+  // Info
   const [mora_com, setMoraCom] = useState("Família");
-  const [total_de_membros, setTotalMembros] = useState("Família");
+  const [total_de_membros, setTotalMembros] = useState(1);
   const [moradia, setMoradia] = useState("Própria");
 
+  //Familiares
+  const [familiares, setFamiliares] = useState([]);
+  // Veículo
   const [temVeiculo, setTemVeiculo] = useState("SIM");
-  const [marca_modelo, setMarcaModelo] = useState("");
-  const [ano, setAno] = useState("");
-  const [tipo, setTipo] = useState("COMERCIAL");
-
+  const veiculos = [];
+  //Dados
   const grupo_familiar = {
     mora_com,
     total_de_membros: Number(total_de_membros),
     moradia,
     temVeiculo: temVeiculo === "SIM" ? 1 : 0,
-    veiculos: [
-      {
-        marca_modelo,
-        ano,
-        tipo
-      }
-    ]
+    veiculos,
+    familiares
   };
 
+  useEffect(() => {
+    console.log(veiculos);
+  }, [grupo_familiar]);
   return (
     <>
       <Title text="5 - Grupo familiar" />
@@ -46,6 +48,9 @@ export default function GrupoFamiliar() {
         <QC variable={setMoradia} />
         <Divider />
         <QD variable={setTemVeiculo} />
+        <Veiculos width="35%" veiculos={veiculos} />
+        <Divider />
+        <Familia width="96%" total={total_de_membros} />
       </Container>
       <AdvanceBtn
         text="ENVIAR DADOS"

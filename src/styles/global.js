@@ -12,4 +12,9 @@ export default createGlobalStyle`
         font-size: 15px;
         --webkit-font-smoothing: antialiased !important;
     }
+
+    input{
+        text-transform: lowercase;
+        text-align: center;
+    }
 `;

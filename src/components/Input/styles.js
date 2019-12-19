@@ -8,6 +8,7 @@ export const Container = styled.div`
   }
 
   label input {
+    text-transform: lowercase;
     margin-bottom: 20px;
     margin-left: 5px;
     margin-right: 100px;
