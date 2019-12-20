@@ -11,6 +11,13 @@ export default function DadosDoCandidato(props) {
   const [nasc, setNasc] = useState("");
 
   useEffect(() => {
+    if (sexo === "feminino") {
+      setSexo(0);
+    } else if (sexo === "masculino") {
+      setSexo(1);
+    } else {
+      setSexo(2);
+    }
     props.variable({ nome, sexo, nasc });
   }, [nome, sexo, nasc]);
 

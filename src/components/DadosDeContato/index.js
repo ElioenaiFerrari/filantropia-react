@@ -8,6 +8,7 @@ export default function DadosDeContato(props) {
   const [celular, setCelular] = useState("");
   const [email, setEmail] = useState("");
   const [cidade, setCidade] = useState("");
+  const [estado, setEstado] = useState("");
   const [numero, setNumero] = useState("");
   const [telefone, setTelefone] = useState("");
   const [endereco, setEndereco] = useState("");
@@ -25,7 +26,8 @@ export default function DadosDeContato(props) {
       endereco,
       bairro,
       complemento,
-      cep
+      cep,
+      estado
     });
   }, [
     celular,
@@ -36,7 +38,8 @@ export default function DadosDeContato(props) {
     endereco,
     bairro,
     complemento,
-    cep
+    cep,
+    estado
   ]);
 
   return (
@@ -90,6 +93,12 @@ export default function DadosDeContato(props) {
             text="Complemento:"
             width="200px"
             variable={setComplemento}
+          />
+          <Input
+            owner="estado"
+            text="Estado:"
+            width="200px"
+            variable={setEstado}
           />
         </div>
       </Container>

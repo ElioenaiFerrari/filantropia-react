@@ -12,6 +12,7 @@ export const Container = styled.div`
     width: 200px;
     background: steelblue;
     color: white;
+    padding: 5px;
   }
 
   input {

@@ -8,19 +8,18 @@ export const Container = styled.div`
     border: 1px solid steelblue;
     padding: 10px;
     border-radius: 5px;
-    width: 50%;
+    width: 20%;
     font-size: 20px;
     text-align: center;
     text-decoration: none;
     color: steelblue;
     margin-top: 50px;
-    transition: width 0.2s ease-in-out !important;
+    transition: background 0.2s ease-in-out !important;
   }
 
   a:hover {
-    background-color: steelblue;
+    background: linear-gradient(40deg, #7159c1, steelblue);
     color: white;
-    width: 20%;
   }
 
   a:active {

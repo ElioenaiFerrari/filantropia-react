@@ -6,7 +6,7 @@ export const Container = styled.div`
   margin-bottom: 10px;
 
   label {
-    font-weight: 600;
+    font-weight: 800;
     margin: 0 10px;
   }
 
@@ -15,7 +15,7 @@ export const Container = styled.div`
     margin-right: 100px;
     color: white;
     border: none;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
     width: ${props => props.props.width};
   }

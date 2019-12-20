@@ -15,15 +15,16 @@ import Familia from "./Familia";
 
 export default function GrupoFamiliar() {
   // Info
-  const [mora_com, setMoraCom] = useState("Família");
-  const [total_de_membros, setTotalMembros] = useState(1);
+  const [mora_com, setMoraCom] = useState("Sozinho");
+  const [total_de_membros, setTotalMembros] = useState(0);
   const [moradia, setMoradia] = useState("Própria");
 
   //Familiares
   const [familiares, setFamiliares] = useState([]);
   // Veículo
   const [temVeiculo, setTemVeiculo] = useState("SIM");
-  const veiculos = [];
+
+  let [veiculos] = useState([{}]);
   //Dados
   const grupo_familiar = {
     mora_com,
@@ -36,7 +37,8 @@ export default function GrupoFamiliar() {
 
   useEffect(() => {
     console.log(veiculos);
-  }, [grupo_familiar]);
+  }, [veiculos]);
+
   return (
     <>
       <Title text="5 - Grupo familiar" />
@@ -50,7 +52,12 @@ export default function GrupoFamiliar() {
         <QD variable={setTemVeiculo} />
         <Veiculos width="35%" veiculos={veiculos} />
         <Divider />
-        <Familia width="96%" total={total_de_membros} />
+        <Familia
+          width="95%"
+          familiares={familiares}
+          total={total_de_membros}
+          mora_com={mora_com}
+        />
       </Container>
       <AdvanceBtn
         text="ENVIAR DADOS"
