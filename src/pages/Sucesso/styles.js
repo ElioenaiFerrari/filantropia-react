@@ -46,7 +46,7 @@ export const Container = styled.div`
   }
 
   a:hover {
-    background: steelblue;
+    background: linear-gradient(40deg, #7159c1, steelblue);
     color: white;
   }
 `;

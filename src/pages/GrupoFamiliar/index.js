@@ -50,7 +50,7 @@ export default function GrupoFamiliar() {
         <QC variable={setMoradia} />
         <Divider />
         <QD variable={setTemVeiculo} />
-        <Veiculos width="35%" veiculos={veiculos} />
+        <Veiculos width="40%" veiculos={veiculos} />
         <Divider />
         <Familia
           width="95%"

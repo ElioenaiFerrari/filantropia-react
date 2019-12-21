@@ -10,7 +10,7 @@ export default function QA(props) {
         variable={props.variable}
         owner="comQuemMora"
         text="a) Com quem o candidato mora?"
-        width="90px"
+        width="100px"
         content={["Sozinho", "Família"]}
       />
     </Container>

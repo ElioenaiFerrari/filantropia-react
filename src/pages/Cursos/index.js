@@ -21,14 +21,14 @@ export default function Cursos() {
       <Title text="3 - Cursos" />
       <Container>
         <Select
-          width="150px"
+          width="180px"
           variable={setPrimeiraOp}
           owner="primeira_op"
           text="1° Opção"
           content={cursos}
         />
         <Select
-          width="150px"
+          width="180px"
           variable={setSegundaOp}
           owner="segunda_op"
           text="2° Opção"

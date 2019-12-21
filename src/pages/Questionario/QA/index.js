@@ -10,7 +10,7 @@ export default function QA(props) {
         variable={props.variable}
         owner="ondeCursou"
         text="a) Em que escola você cursou o ensino médio?"
-        width="410px"
+        width="450px"
         content={[
           "Em escola de rede pública durante todo o ensino médio.",
           "Em escola de rede privada na condição de bolsista integral da própria instituição.",

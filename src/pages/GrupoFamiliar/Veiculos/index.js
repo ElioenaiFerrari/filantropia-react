@@ -72,8 +72,6 @@ export default function Veiculos(props) {
         {createTable(0)}
         {createTable(1)}
         {createTable(2)}
-        {createTable(3)}
-        {createTable(4)}
       </table>
     </Container>
   );

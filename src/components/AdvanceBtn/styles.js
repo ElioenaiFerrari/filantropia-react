@@ -10,6 +10,7 @@ export const Container = styled.div`
     border-radius: 5px;
     width: 20%;
     font-size: 20px;
+    font-weight: 600;
     text-align: center;
     text-decoration: none;
     color: steelblue;
