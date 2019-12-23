@@ -36,17 +36,18 @@ export const Container = styled.div`
     text-align: center;
     background: white;
     padding: 10px;
-    width: 300px;
+    width: 22%;
     color: steelblue;
     margin-top: 50px;
     font-size: 20px;
     border-radius: 5px;
     border: 1px solid steelblue;
-    transition: background 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out, color 0.5s ease-in-out;
   }
 
   a:hover {
     background: linear-gradient(40deg, #7159c1, steelblue);
+    width: 20%;
     color: white;
   }
 `;

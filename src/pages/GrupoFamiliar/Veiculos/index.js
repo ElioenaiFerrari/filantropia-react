@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Container } from "./styles";
+import setVeiculos from "./setVeiculos";
 
 export default function Veiculos(props) {
   const head = ["Marca/Modelo", "Ano de fabricação", "Utilização"];
@@ -12,49 +13,19 @@ export default function Veiculos(props) {
           <input
             id={`marca_modelo${position}`}
             type="text"
-            onBlur={event => {
-              props.veiculos[position] = {
-                marca_modelo: document.querySelector(`#marca_modelo${position}`)
-                  .value,
-                ano: document.querySelector(`#ano${position}`).value,
-                tipo:
-                  document.querySelector(`#tipo${position}`).value === "pessoal"
-                    ? 0
-                    : 1
-              };
-            }}
+            onBlur={event => setVeiculos(position, props.veiculos)}
           />
         </td>
         <td>
           <input
             id={`ano${position}`}
             type="text"
-            onBlur={event => {
-              props.veiculos[position] = {
-                marca_modelo: document.querySelector(`#marca_modelo${position}`)
-                  .value,
-                ano: document.querySelector(`#ano${position}`).value,
-                tipo:
-                  document.querySelector(`#tipo${position}`).value === "pessoal"
-                    ? 0
-                    : 1
-              };
-            }}
+            onBlur={event => setVeiculos(position, props.veiculos)}
           />
         </td>
         <select
           id={`tipo${position}`}
-          onBlur={event => {
-            props.veiculos[position] = {
-              marca_modelo: document.querySelector(`#marca_modelo${position}`)
-                .value,
-              ano: document.querySelector(`#ano${position}`).value,
-              tipo:
-                document.querySelector(`#tipo${position}`).value === "pessoal"
-                  ? 0
-                  : 1
-            };
-          }}
+          onBlur={event => setVeiculos(position, props.veiculos)}
         >
           <option value="pessoal">Pessoal</option>
           <option value="comercial">Comercial</option>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { Container } from "./styles";
 import { parentesco, titulo, estado_civil, escolaridade } from "./dados";
+import setFamiliares from "./setFamiliares";
 
 export default function Familia(props) {
   var [total] = useState([]);
@@ -13,6 +14,7 @@ export default function Familia(props) {
   for (let i = 0; i < props.total; i++) {
     total.push(i);
   }
+
   function createTable(position) {
     return (
       <tr>
@@ -20,74 +22,20 @@ export default function Familia(props) {
           <input
             id={`nome${position}`}
             type="text"
-            onBlur={event =>
-              (props.familiares[position] = {
-                nome: document.querySelector(`#nome${position}`).value,
-                idade: Number(
-                  document.querySelector(`#idade${position}`).value
-                ),
-                parentesco: document.querySelector(`#parentesco${position}`)
-                  .value,
-                estado_civil: document.querySelector(`#estado_civil${position}`)
-                  .value,
-                escolaridade: document.querySelector(`#escolaridade${position}`)
-                  .value,
-                profissao: document.querySelector(`#profissao${position}`)
-                  .value,
-                renda_bruta: Number(
-                  document.querySelector(`#renda_bruta${position}`).value
-                )
-              })
-            }
+            onBlur={event => setFamiliares(position, props.familiares)}
           />
         </td>
         <td>
           <input
             id={`idade${position}`}
             type="number"
-            onBlur={event =>
-              (props.familiares[position] = {
-                nome: document.querySelector(`#nome${position}`).value,
-                idade: Number(
-                  document.querySelector(`#idade${position}`).value
-                ),
-                parentesco: document.querySelector(`#parentesco${position}`)
-                  .value,
-                estado_civil: document.querySelector(`#estado_civil${position}`)
-                  .value,
-                escolaridade: document.querySelector(`#escolaridade${position}`)
-                  .value,
-                profissao: document.querySelector(`#profissao${position}`)
-                  .value,
-                renda_bruta: Number(
-                  document.querySelector(`#renda_bruta${position}`).value
-                )
-              })
-            }
+            onBlur={event => setFamiliares(position, props.familiares)}
           />
         </td>
         <td>
           <select
             id={`parentesco${position}`}
-            onBlur={event =>
-              (props.familiares[position] = {
-                nome: document.querySelector(`#nome${position}`).value,
-                idade: Number(
-                  document.querySelector(`#idade${position}`).value
-                ),
-                parentesco: document.querySelector(`#parentesco${position}`)
-                  .value,
-                estado_civil: document.querySelector(`#estado_civil${position}`)
-                  .value,
-                escolaridade: document.querySelector(`#escolaridade${position}`)
-                  .value,
-                profissao: document.querySelector(`#profissao${position}`)
-                  .value,
-                renda_bruta: Number(
-                  document.querySelector(`#renda_bruta${position}`).value
-                )
-              })
-            }
+            onBlur={event => setFamiliares(position, props.familiares)}
           >
             {parentesco.map(item => (
               <option value={item}>{item}</option>
@@ -97,25 +45,7 @@ export default function Familia(props) {
         <td>
           <select
             id={`estado_civil${position}`}
-            onBlur={event =>
-              (props.familiares[position] = {
-                nome: document.querySelector(`#nome${position}`).value,
-                idade: Number(
-                  document.querySelector(`#idade${position}`).value
-                ),
-                parentesco: document.querySelector(`#parentesco${position}`)
-                  .value,
-                estado_civil: document.querySelector(`#estado_civil${position}`)
-                  .value,
-                escolaridade: document.querySelector(`#escolaridade${position}`)
-                  .value,
-                profissao: document.querySelector(`#profissao${position}`)
-                  .value,
-                renda_bruta: Number(
-                  document.querySelector(`#renda_bruta${position}`).value
-                )
-              })
-            }
+            onBlur={event => setFamiliares(position, props.familiares)}
           >
             {estado_civil.map(item => (
               <option value={item}>{item}</option>
@@ -125,25 +55,7 @@ export default function Familia(props) {
         <td>
           <select
             id={`escolaridade${position}`}
-            onBlur={event =>
-              (props.familiares[position] = {
-                nome: document.querySelector(`#nome${position}`).value,
-                idade: Number(
-                  document.querySelector(`#idade${position}`).value
-                ),
-                parentesco: document.querySelector(`#parentesco${position}`)
-                  .value,
-                estado_civil: document.querySelector(`#estado_civil${position}`)
-                  .value,
-                escolaridade: document.querySelector(`#escolaridade${position}`)
-                  .value,
-                profissao: document.querySelector(`#profissao${position}`)
-                  .value,
-                renda_bruta: Number(
-                  document.querySelector(`#renda_bruta${position}`).value
-                )
-              })
-            }
+            onBlur={event => setFamiliares(position, props.familiares)}
           >
             {escolaridade.map(item => (
               <option value={item}>{item}</option>
@@ -154,50 +66,14 @@ export default function Familia(props) {
           <input
             id={`profissao${position}`}
             type="text"
-            onBlur={event =>
-              (props.familiares[position] = {
-                nome: document.querySelector(`#nome${position}`).value,
-                idade: Number(
-                  document.querySelector(`#idade${position}`).value
-                ),
-                parentesco: document.querySelector(`#parentesco${position}`)
-                  .value,
-                estado_civil: document.querySelector(`#estado_civil${position}`)
-                  .value,
-                escolaridade: document.querySelector(`#escolaridade${position}`)
-                  .value,
-                profissao: document.querySelector(`#profissao${position}`)
-                  .value,
-                renda_bruta: Number(
-                  document.querySelector(`#renda_bruta${position}`).value
-                )
-              })
-            }
+            onBlur={event => setFamiliares(position, props.familiares)}
           />
         </td>
         <td>
           <input
             id={`renda_bruta${position}`}
             type="number"
-            onBlur={event =>
-              (props.familiares[position] = {
-                nome: document.querySelector(`#nome${position}`).value,
-                idade: Number(
-                  document.querySelector(`#idade${position}`).value
-                ),
-                parentesco: document.querySelector(`#parentesco${position}`)
-                  .value,
-                estado_civil: document.querySelector(`#estado_civil${position}`)
-                  .value,
-                escolaridade: document.querySelector(`#escolaridade${position}`)
-                  .value,
-                profissao: document.querySelector(`#profissao${position}`)
-                  .value,
-                renda_bruta: Number(
-                  document.querySelector(`#renda_bruta${position}`).value
-                )
-              })
-            }
+            onBlur={event => setFamiliares(position, props.familiares)}
           />
         </td>
       </tr>

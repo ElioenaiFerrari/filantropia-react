@@ -13,7 +13,10 @@ export default function Cursos() {
   // Salva os cursos no localStorage
   const [curso, setCursos] = useState({});
   useEffect(() => {
-    setCursos({ primeira_op, segunda_op });
+    setCursos({
+      primeira_op: primeira_op.toLowerCase(),
+      segunda_op: segunda_op.toLowerCase()
+    });
   }, [primeira_op, segunda_op]);
 
   return (

@@ -8,23 +8,24 @@ export const Container = styled.div`
     border: 1px solid steelblue;
     padding: 10px;
     border-radius: 5px;
-    width: 20%;
+    width: 22%;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
     color: steelblue;
     margin-top: 50px;
-    transition: background 0.2s ease-in-out !important;
+    transition: width 0.2s ease-in-out, color 0.5s ease-in-out,
+      transform 0.2s ease-in-out;
   }
 
   a:hover {
     background: linear-gradient(40deg, #7159c1, steelblue);
     color: white;
+    width: 20%;
   }
 
   a:active {
     transform: rotate(360deg);
-    transition: transform 0.2s ease-in-out !important;
   }
 `;

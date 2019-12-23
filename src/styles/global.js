@@ -17,4 +17,5 @@ export default createGlobalStyle`
         text-transform: lowercase;
         text-align: center;
     }
+
 `;
